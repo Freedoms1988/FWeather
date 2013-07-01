@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface FWViewController : UIViewController
+#import "AFNetWorking.h"
+#import "MBProgressHUD.h"
+#import "JSONKit/JSONKit.h"
+@interface FWViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
 
 @end
+
