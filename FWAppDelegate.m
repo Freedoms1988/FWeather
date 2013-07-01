@@ -16,8 +16,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[FWViewController alloc] initWithNibName:@"FWViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    FWViewController *mainController = [[FWViewController alloc] initWithNibName:nil bundle:nil];
+    FWNavigationViewController *navigationController = [[FWNavigationViewController alloc] initWithRootViewController:mainController];
+    mainController.title = @"FreedomsWeather";
+    self.viewController = [[FWViewController alloc] initWithNibName:nil bundle:nil];
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FWNavigationViewController.h"
+
 
 @class FWViewController;
 
