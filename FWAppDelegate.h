@@ -8,14 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "FWNavigationViewController.h"
+#import "FWMainViewController.h"
+#import "AFNetworkActivityIndicatorManager.h"
 
-
-@class FWViewController;
+@class FWMainViewController;
 
 @interface FWAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) FWViewController *viewController;
+@property (strong, nonatomic) FWMainViewController *viewController;
 
 @end

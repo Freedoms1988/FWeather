@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AFNetWorking.h"
+#import "AFNetworking.h"
 #import "MBProgressHUD.h"
 #import "JSONKit/JSONKit.h"
-@interface FWViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
+#import "FMDatabase.h"
+#import "CityVO.h"
+@interface FWViewController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource>
 
 @end
-

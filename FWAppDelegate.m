@@ -7,21 +7,19 @@
 //
 
 #import "FWAppDelegate.h"
-
-#import "FWViewController.h"
-
 @implementation FWAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    FWViewController *mainController = [[FWViewController alloc] initWithNibName:nil bundle:nil];
-    FWNavigationViewController *navigationController = [[FWNavigationViewController alloc] initWithRootViewController:mainController];
-    mainController.title = @"FreedomsWeather";
-    self.viewController = [[FWViewController alloc] initWithNibName:nil bundle:nil];
+    FWMainViewController *mainViewController = [[FWMainViewController alloc] initWithNibName:nil bundle:nil];
+    mainViewController.title = @"FreedomsWeather";
+    self.viewController = mainViewController;
+    FWNavigationViewController *navigationController = [[FWNavigationViewController alloc] initWithRootViewController:mainViewController];
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     return YES;
 }
 
